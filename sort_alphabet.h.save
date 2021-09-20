@@ -77,7 +77,7 @@ void swap_arrays (char* str1, char* str2, int maxSymbols)
   {
     tmp = * (long long*) (str1 + nchars);
     *(long long*)(str1 + nchars) = *(long long*)(str2 + nchars);  //porasitelno
-    *(long long*)(str2 + nchars) = tmp;                           //(fascinating, yeah)
+    *(long long*)(str2 + nchars) = tmp;                           
 
   //  str1 [nchars] = str2 [nchars];
   //  str2 [nchars] = tmp;
