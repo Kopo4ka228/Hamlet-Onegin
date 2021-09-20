@@ -1,18 +1,19 @@
 #include "C:\Github\std_funcs\my_funcs().h"
 #include <TXLib.h>
 #include "sort_alphabet.h"
-int const maxSymbols = 512;     //макс кол-во символов в строке (должно делиться на 8)
+int const maxSymbols = 512;     //РјР°РєСЃ РєРѕР»-РІРѕ СЃРёРјРІРѕР»РѕРІ РІ СЃС‚СЂРѕРєРµ (РґРѕР»Р¶РЅРѕ РґРµР»РёС‚СЊСЃСЏ РЅР° 8)
 //-----------------------------------------------------------------------------
 
 int main()
 {
+
     FILE* file = fopen("Hamlet.txt", "r");
 
     int nLines = 0;
-    printf("Введите количество строк nLines\n");
+    printf("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє nLines\n");
     scanf("%d", &nLines);
 
-    char** input_string_array = (char**) calloc (nLines, sizeof (char*)); //динамический массив со строками из текста
+    char** input_string_array = (char**) calloc (nLines, sizeof (char*)); //РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃРѕ СЃС‚СЂРѕРєР°РјРё РёР· С‚РµРєСЃС‚Р°
     for(int i =  0; i < nLines; i++)
     {
         input_string_array[i] = (char*) calloc (maxSymbols, sizeof (char));
@@ -25,7 +26,7 @@ int main()
         numstr++;
     }
 
-    // придумать сортировку
+    // РїСЂРёРґСѓРјР°С‚СЊ СЃРѕСЂС‚РёСЂРѕРІРєСѓ
     int num_perestanovok = 1;
     while (num_perestanovok != 0)
     {

@@ -3,8 +3,8 @@
 #include <windows.h>
 int const A_minus_a = 32;
 int Alphabet (char* str1, char* str2);
-char* Del_Spaces (char* line); // возвращает указатель на первую букву(пропускает пробелы)
-bool is_Capital (char ch);     // не используется
+char* Del_Spaces (char* line); // РІРѕР·РІСЂР°С‰Р°РµС‚ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РїРµСЂРІСѓСЋ Р±СѓРєРІСѓ(РїСЂРѕРїСѓСЃРєР°РµС‚ РїСЂРѕР±РµР»С‹)
+bool is_Capital (char ch);     // РЅРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ
 int is_notEmpty (char* str);
 void swap_arrays (char* str1, char* str2, int maxSymbols);
 
@@ -12,7 +12,7 @@ int Alphabet (char* str1, char* str2)
 {
     char* line1 = Del_Spaces (str1);
     char* line2 = Del_Spaces (str2);
-                                                                // на обычных примерах протестирована
+                                                                // РЅР° РѕР±С‹С‡РЅС‹С… РїСЂРёРјРµСЂР°С… РїСЂРѕС‚РµСЃС‚РёСЂРѕРІР°РЅР°
     for(int i = 0; line1[i] != '\0' && line2[i] != '\0'; i++)
     {
         if (line1[i] != line2[i])
@@ -33,7 +33,7 @@ int Alphabet (char* str1, char* str2)
 char* Del_Spaces (char* line)
 {
     int i = 0;
-    while (*(line + i) == ' ')        //протестирована на обычных примерах
+    while (*(line + i) == ' ')        //РїСЂРѕС‚РµСЃС‚РёСЂРѕРІР°РЅР° РЅР° РѕР±С‹С‡РЅС‹С… РїСЂРёРјРµСЂР°С…
         {
         i++;
         }
@@ -57,12 +57,12 @@ int is_notEmpty (char* str)
     for (int i = 0; i < str[i]; i++)
     {
         if (str[i] == ' ')
-        {                                    // протестирована на обычных примерах
+        {                                    // РїСЂРѕС‚РµСЃС‚РёСЂРѕРІР°РЅР° РЅР° РѕР±С‹С‡РЅС‹С… РїСЂРёРјРµСЂР°С…
             count++;
         }
     }
 
-    return /* истинность того факта, что */ (str [count] != '\0');
+    return /* РёСЃС‚РёРЅРЅРѕСЃС‚СЊ С‚РѕРіРѕ С„Р°РєС‚Р°, С‡С‚Рѕ */ (str [count] != '\0');
 }
 
 //-----------------------------------------------------------------------------
@@ -75,7 +75,7 @@ void swap_arrays (char* str1, char* str2, int maxSymbols)
     for (int i = 0; i < sizeof(long long); i++)
     {
         BTtemp[i] = str1[i + nchars];
-        str1[i + nchars] = str2[i + nchars];      //лучше ли это побайтового копирования?
+        str1[i + nchars] = str2[i + nchars];      //Р»СѓС‡С€Рµ Р»Рё СЌС‚Рѕ РїРѕР±Р°Р№С‚РѕРІРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ?
         str2[i + nchars] = BTtemp[i];
     }
   }
