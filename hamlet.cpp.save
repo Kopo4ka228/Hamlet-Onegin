@@ -16,7 +16,10 @@ int main()
     scanf("%d", &nLines);
 
     char** input_string_array = (char**) calloc (nLines, sizeof (char*)); //–¥–∏–Ω–∞–º–∏—á–µ—Å–∫–∏–π –º–∞—Å—Å–∏–≤ —Å–æ —Å—Ç—Ä–æ–∫–∞–º–∏ –∏–∑ —Ç–µ–∫—Å—Ç–∞
-    to_initialise_array(input_string_array, nLines);
+    for(int i =  0; i < nLines; i++)
+    {
+        input_string_array[i] = (char*) calloc (maxSymbols, sizeof (char));
+    }  // fn
 
     int numstr = 0;
     while (numstr < nLines)
@@ -27,9 +30,15 @@ int main()
 
     // –ø—Ä–∏–¥—É–º–∞—Ç—å —Å–æ—Ä—Ç–∏—Ä–æ–≤–∫—É
     sorting(input_string_array, nLines);
+    
+    for(int i = 0; i < nLines; i++)
+    {
+        if (is_notEmpty(input_string_array[i]))
+            {
+                puts(input_string_array[i]);
+            }
+    } // fn
 
-    print_not_empty_lines(input_string_array, nLines);
-
-    free_array(input_string_array, nLines);
+    free (input_string_array); // Ì‡ÔËÒ‡Ú¸ ÌÓÏ‡Î¸ÌÛ˛ ÙÛÌÍˆË˛ ÓÒ‚Ó·ÓÊ‰ÂÌËˇ
     return 0;
 }
