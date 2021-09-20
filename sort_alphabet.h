@@ -30,7 +30,7 @@ int Alphabet (char* str1, char* str2)
 
 //-----------------------------------------------------------------------------
 
-char* Del_Spaces (char* line)
+char* Skip_Spaces (char* line)
 {
     int i = 0;
     while (*(line + i) == ' ')        //протестирована на обычных примерах
