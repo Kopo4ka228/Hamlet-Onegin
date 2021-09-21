@@ -2,28 +2,23 @@
 #include <TXLib.h>
 #include "sort_alphabet.h"
 
-int const maxSymbols = 512;  // kill!    //макс кол-во символов в строке (должно делиться на 8)
-
+int const ALL_LINES = -1;
 //-----------------------------------------------------------------------------
 
 int main()
 {
-
-    FILE* file = fopen("Hamlet.txt", "r");
-
     int nLines = 0;
     printf("Введите количество строк nLines\n");
     scanf("%d", &nLines);
 
-    char** input_string_array = (char**) calloc (nLines, sizeof (char*)); //динамический массив со строками из текста
-    to_initialise_array(input_string_array, nLines);
-
-    int numstr = 0;
-    while (numstr < nLines)
+    FILE* file = fopen("Hamlet.txt", "r");
+    if (nLines == ALL_LINES)
     {
-        fgets (input_string_array[numstr], maxSymbols, file);
-        numstr++;
-    }  // fn
+        nLines = put_all_Lines(file);
+    }
+    printf("%d", nLines);
+    char** input_string_array = to_initialise_array(nLines);
+    put_lines_in_array (file, input_string_array, nLines);
 
     // придумать сортировку
     sorting(input_string_array, nLines);

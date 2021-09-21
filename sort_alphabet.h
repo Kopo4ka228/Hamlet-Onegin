@@ -1,8 +1,9 @@
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <windows.h>
 
-int const A_minus_a = 'a' - 'A';
+int const a_minus_A = 'a' - 'A';
 int const MAXSYMBOLS = 512;
 
 int Alphabet (char* str1, char* str2);
@@ -12,8 +13,26 @@ int is_notEmpty (const char* str);
 void swap_arrays (char* str1, char* str2, int maxSymbols);
 void sorting (char** input_string_array, int nLines);
 void print_not_empty_lines (char** input_string_array, int nLines);
-void to_initialise_array (char** input_string_array, int nLines);
+char** to_initialise_array (int nLines);
 void free_array (char** input_string_array, int nLines);
+void put_lines_in_array (FILE* file, char** input_string_array, int nLines);
+int put_all_Lines (FILE* file);
+
+int put_all_Lines (FILE* file)
+{
+    char ch = getc (file);
+    int count = 0;
+    while (ch != EOF)
+    {
+        if (ch == '\n')
+        {
+            count++;
+        }
+        ch = getc (file);
+    }
+    return count + 1;
+}
+//-----------------------------------------------------------------------------
 
 int Alphabet (char* str1, char* str2)
 {
@@ -28,9 +47,9 @@ int Alphabet (char* str1, char* str2)
         if (line1[i] != line2[i])
         {
             if (is_Capital(line1[i]))
-                line1[i] += A_minus_a;
+                line1[i] += a_minus_A;
             if (is_Capital(line2[i]))
-                line2[i] += A_minus_a;
+                line2[i] += a_minus_A;
             return line1[i] - line2[i];
         }
     }
@@ -126,12 +145,16 @@ void print_not_empty_lines (char** input_string_array, int nLines)
 }
 
 //-----------------------------------------------------------------------------
-void to_initialise_array(char** input_string_array, int nLines)
+char** to_initialise_array(int nLines)
 {
+    char** input_string_array = (char**) calloc (nLines, sizeof (char*)); //динамический массив со строками из текста
+
     for(int i =  0; i < nLines; i++)
     {
         input_string_array[i] = (char*) calloc (MAXSYMBOLS, sizeof (char));
     }
+
+    return input_string_array;
 }
 
 //-----------------------------------------------------------------------------
@@ -143,4 +166,15 @@ void free_array(char** input_string_array, int nLines)
     }
 
     free(input_string_array);
+}
+
+//-----------------------------------------------------------------------------
+void put_lines_in_array(FILE* file, char** input_string_array, int nLines)
+{
+    int numstr = 0;
+    while (numstr < nLines)
+    {
+        fgets (input_string_array[numstr], MAXSYMBOLS, file);
+        numstr++;
+    }
 }

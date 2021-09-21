@@ -112,3 +112,591 @@ Run file:	C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe
 Directory:	C:\Github\Hamlet\Hamlet-Onegin
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D45D в функции put_lines_in_array() в файле C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h на строке 167. Попытка прочесть данные по адресу NULL в модуле C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x005062FC (32-bit), Flags: Cmdre0, Thread: 0x55E0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D45D in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: put_lines_in_array() at C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h (167):
+
+    165:         while (feof (file) == 0)
+    166:         {
+=>  167:             fgets (input_string_array[numstr], MAXSYMBOLS, file);
+    168:             *nLines += 1;
+    169:             numstr += 1;
+
+# 1 0x0042D533 in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: main() at C:/Github/Hamlet/Hamlet-Onegin/hamlet.cpp (18):
+
+     16:     char** input_string_array = (char**) calloc (nLines, sizeof (char*)); //РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃРѕ СЃС‚СЂРѕРєР°РјРё РёР· С‚РµРєСЃС‚Р°
+     17:     to_initialise_array(input_string_array, nLines);
+=>   18:     put_lines_in_array (file, input_string_array, &nLines);
+     19: 
+     20:     // РїСЂРёРґСѓРјР°С‚СЊ СЃРѕСЂС‚РёСЂРѕРІРєСѓ
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 21 2021 02:28:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 21 2021 02:28:07
+
+Run file:	C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe
+Directory:	C:\Github\Hamlet\Hamlet-Onegin
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D45D в функции put_lines_in_array() в файле C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h на строке 167. Попытка прочесть данные по адресу NULL в модуле C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x005062FC (32-bit), Flags: Cmdre0, Thread: 0x55E0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D45D in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: put_lines_in_array() at C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h (167):
+
+    165:         while (feof (file) == 0)
+    166:         {
+=>  167:             fgets (input_string_array[numstr], MAXSYMBOLS, file);
+    168:             *nLines += 1;
+    169:             numstr += 1;
+
+# 1 0x0042D533 in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: main() at C:/Github/Hamlet/Hamlet-Onegin/hamlet.cpp (18):
+
+     16:     char** input_string_array = (char**) calloc (nLines, sizeof (char*)); //РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃРѕ СЃС‚СЂРѕРєР°РјРё РёР· С‚РµРєСЃС‚Р°
+     17:     to_initialise_array(input_string_array, nLines);
+=>   18:     put_lines_in_array (file, input_string_array, &nLines);
+     19: 
+     20:     // РїСЂРёРґСѓРјР°С‚СЊ СЃРѕСЂС‚РёСЂРѕРІРєСѓ
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 21 2021 02:28:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 21 2021 02:28:07
+
+Run file:	C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe
+Directory:	C:\Github\Hamlet\Hamlet-Onegin
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D454 в функции put_lines_in_array() в файле C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h на строке 167. Попытка прочесть данные по адресу NULL в модуле C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x005062FC (32-bit), Flags: Cmdre0, Thread: 0x5AA4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D454 in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: put_lines_in_array() at C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h (167):
+
+    165:         while (feof (file) == 0)
+    166:         {
+=>  167:             fgets (input_string_array[numstr], MAXSYMBOLS, file);
+    168:             numstr += 1;
+    169:         }
+
+# 1 0x0042D51D in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: main() at C:/Github/Hamlet/Hamlet-Onegin/hamlet.cpp (18):
+
+     16:     char** input_string_array = (char**) calloc (nLines, sizeof (char*)); //РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃРѕ СЃС‚СЂРѕРєР°РјРё РёР· С‚РµРєСЃС‚Р°
+     17:     to_initialise_array(input_string_array, nLines);
+=>   18:     put_lines_in_array (file, input_string_array, &nLines);
+     19: 
+     20:     // РїСЂРёРґСѓРјР°С‚СЊ СЃРѕСЂС‚РёСЂРѕРІРєСѓ
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 21 2021 02:32:25, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 21 2021 02:32:29
+
+Run file:	C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe
+Directory:	C:\Github\Hamlet\Hamlet-Onegin
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D454 в функции put_lines_in_array() в файле C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h на строке 167. Попытка прочесть данные по адресу NULL в модуле C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x005062FC (32-bit), Flags: Cmdre0, Thread: 0x5AA4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D454 in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: put_lines_in_array() at C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h (167):
+
+    165:         while (feof (file) == 0)
+    166:         {
+=>  167:             fgets (input_string_array[numstr], MAXSYMBOLS, file);
+    168:             numstr += 1;
+    169:         }
+
+# 1 0x0042D51D in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: main() at C:/Github/Hamlet/Hamlet-Onegin/hamlet.cpp (18):
+
+     16:     char** input_string_array = (char**) calloc (nLines, sizeof (char*)); //РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃРѕ СЃС‚СЂРѕРєР°РјРё РёР· С‚РµРєСЃС‚Р°
+     17:     to_initialise_array(input_string_array, nLines);
+=>   18:     put_lines_in_array (file, input_string_array, &nLines);
+     19: 
+     20:     // РїСЂРёРґСѓРјР°С‚СЊ СЃРѕСЂС‚РёСЂРѕРІРєСѓ
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 21 2021 02:32:25, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 21 2021 02:32:29
+
+Run file:	C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe
+Directory:	C:\Github\Hamlet\Hamlet-Onegin
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D454 в функции put_lines_in_array() в файле C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h на строке 167. Попытка прочесть данные по адресу NULL в модуле C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x005062FC (32-bit), Flags: Cmdre0, Thread: 0x5520 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D454 in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: put_lines_in_array() at C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h (167):
+
+    165:         while (feof (file) == 0)
+    166:         {
+=>  167:             fgets (input_string_array[numstr], MAXSYMBOLS, file);
+    168:             numstr++;
+    169:         }
+
+# 1 0x0042D51D in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: main() at C:/Github/Hamlet/Hamlet-Onegin/hamlet.cpp (18):
+
+     16:     char** input_string_array = (char**) calloc (nLines, sizeof (char*)); //РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃРѕ СЃС‚СЂРѕРєР°РјРё РёР· С‚РµРєСЃС‚Р°
+     17:     to_initialise_array(input_string_array, nLines);
+=>   18:     put_lines_in_array (file, input_string_array, &nLines);
+     19: 
+     20:     // РїСЂРёРґСѓРјР°С‚СЊ СЃРѕСЂС‚РёСЂРѕРІРєСѓ
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 21 2021 02:41:09, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 21 2021 02:41:14
+
+Run file:	C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe
+Directory:	C:\Github\Hamlet\Hamlet-Onegin
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D454 в функции put_lines_in_array() в файле C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h на строке 167. Попытка прочесть данные по адресу NULL в модуле C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x005062FC (32-bit), Flags: Cmdre0, Thread: 0x5520 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D454 in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: put_lines_in_array() at C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h (167):
+
+    165:         while (feof (file) == 0)
+    166:         {
+=>  167:             fgets (input_string_array[numstr], MAXSYMBOLS, file);
+    168:             numstr++;
+    169:         }
+
+# 1 0x0042D51D in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: main() at C:/Github/Hamlet/Hamlet-Onegin/hamlet.cpp (18):
+
+     16:     char** input_string_array = (char**) calloc (nLines, sizeof (char*)); //РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃРѕ СЃС‚СЂРѕРєР°РјРё РёР· С‚РµРєСЃС‚Р°
+     17:     to_initialise_array(input_string_array, nLines);
+=>   18:     put_lines_in_array (file, input_string_array, &nLines);
+     19: 
+     20:     // РїСЂРёРґСѓРјР°С‚СЊ СЃРѕСЂС‚РёСЂРѕРІРєСѓ
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 21 2021 02:41:09, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 21 2021 02:41:14
+
+Run file:	C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe
+Directory:	C:\Github\Hamlet\Hamlet-Onegin
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D452 в функции put_lines_in_array() в файле C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h на строке 167. Попытка прочесть данные по адресу NULL в модуле C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x005062FC (32-bit), Flags: Cmdre0, Thread: 0x3238 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D452 in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: put_lines_in_array() at C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h (167):
+
+    165:         while (true)
+    166:         {
+=>  167:             fgets (input_string_array[numstr], MAXSYMBOLS, file);
+    168:             if (feof (file) != 0)
+    169:                 break;
+
+# 1 0x0042D51F in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: main() at C:/Github/Hamlet/Hamlet-Onegin/hamlet.cpp (18):
+
+     16:     char** input_string_array = (char**) calloc (nLines, sizeof (char*)); //РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃРѕ СЃС‚СЂРѕРєР°РјРё РёР· С‚РµРєСЃС‚Р°
+     17:     to_initialise_array(input_string_array, nLines);
+=>   18:     put_lines_in_array (file, input_string_array, &nLines);
+     19: 
+     20:     // РїСЂРёРґСѓРјР°С‚СЊ СЃРѕСЂС‚РёСЂРѕРІРєСѓ
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 21 2021 02:45:11, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 21 2021 02:45:15
+
+Run file:	C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe
+Directory:	C:\Github\Hamlet\Hamlet-Onegin
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D452 в функции put_lines_in_array() в файле C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h на строке 167. Попытка прочесть данные по адресу NULL в модуле C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x005062FC (32-bit), Flags: Cmdre0, Thread: 0x3238 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D452 in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: put_lines_in_array() at C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h (167):
+
+    165:         while (true)
+    166:         {
+=>  167:             fgets (input_string_array[numstr], MAXSYMBOLS, file);
+    168:             if (feof (file) != 0)
+    169:                 break;
+
+# 1 0x0042D51F in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: main() at C:/Github/Hamlet/Hamlet-Onegin/hamlet.cpp (18):
+
+     16:     char** input_string_array = (char**) calloc (nLines, sizeof (char*)); //РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃРѕ СЃС‚СЂРѕРєР°РјРё РёР· С‚РµРєСЃС‚Р°
+     17:     to_initialise_array(input_string_array, nLines);
+=>   18:     put_lines_in_array (file, input_string_array, &nLines);
+     19: 
+     20:     // РїСЂРёРґСѓРјР°С‚СЊ СЃРѕСЂС‚РёСЂРѕРІРєСѓ
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 21 2021 02:45:11, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 21 2021 02:45:15
+
+Run file:	C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe
+Directory:	C:\Github\Hamlet\Hamlet-Onegin
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D458 в функции put_lines_in_array() в файле C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h на строке 165. Попытка прочесть данные по адресу NULL в модуле C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x005062FC (32-bit), Flags: Cmdre0, Thread: 0x53BC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D458 in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: put_lines_in_array() at C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h (165):
+
+    163:     {
+    164:         int numstr = 0;
+=>  165:         while ((fgets (input_string_array[numstr], MAXSYMBOLS, file)) != NULL)
+    166:         {
+    167:             numstr++;
+
+# 1 0x0042D51A in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: main() at C:/Github/Hamlet/Hamlet-Onegin/hamlet.cpp (18):
+
+     16:     char** input_string_array = (char**) calloc (nLines, sizeof (char*)); //РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃРѕ СЃС‚СЂРѕРєР°РјРё РёР· С‚РµРєСЃС‚Р°
+     17:     to_initialise_array(input_string_array, nLines);
+=>   18:     put_lines_in_array (file, input_string_array, &nLines);
+     19: 
+     20:     // РїСЂРёРґСѓРјР°С‚СЊ СЃРѕСЂС‚РёСЂРѕРІРєСѓ
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 21 2021 02:50:09, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 21 2021 02:50:14
+
+Run file:	C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe
+Directory:	C:\Github\Hamlet\Hamlet-Onegin
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D458 в функции put_lines_in_array() в файле C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h на строке 165. Попытка прочесть данные по адресу NULL в модуле C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x005062FC (32-bit), Flags: Cmdre0, Thread: 0x53BC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D458 in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: put_lines_in_array() at C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h (165):
+
+    163:     {
+    164:         int numstr = 0;
+=>  165:         while ((fgets (input_string_array[numstr], MAXSYMBOLS, file)) != NULL)
+    166:         {
+    167:             numstr++;
+
+# 1 0x0042D51A in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: main() at C:/Github/Hamlet/Hamlet-Onegin/hamlet.cpp (18):
+
+     16:     char** input_string_array = (char**) calloc (nLines, sizeof (char*)); //РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃРѕ СЃС‚СЂРѕРєР°РјРё РёР· С‚РµРєСЃС‚Р°
+     17:     to_initialise_array(input_string_array, nLines);
+=>   18:     put_lines_in_array (file, input_string_array, &nLines);
+     19: 
+     20:     // РїСЂРёРґСѓРјР°С‚СЊ СЃРѕСЂС‚РёСЂРѕРІРєСѓ
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 21 2021 02:50:09, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 21 2021 02:50:14
+
+Run file:	C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe
+Directory:	C:\Github\Hamlet\Hamlet-Onegin
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D454 в функции put_lines_in_array() в файле C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h на строке 167. Попытка прочесть данные по адресу NULL в модуле C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x005062FC (32-bit), Flags: Cmdre0, Thread: 0x48BC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D454 in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: put_lines_in_array() at C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h (167):
+
+    165:         while (getchar() != EOF)
+    166:         {
+=>  167:             fgets (input_string_array[numstr], MAXSYMBOLS, file);
+    168:             numstr++;
+    169:         }
+
+# 1 0x0042D520 in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: main() at C:/Github/Hamlet/Hamlet-Onegin/hamlet.cpp (18):
+
+     16:     char** input_string_array = (char**) calloc (nLines, sizeof (char*)); //РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃРѕ СЃС‚СЂРѕРєР°РјРё РёР· С‚РµРєСЃС‚Р°
+     17:     to_initialise_array(input_string_array, nLines);
+=>   18:     put_lines_in_array (file, input_string_array, &nLines);
+     19: 
+     20:     // РїСЂРёРґСѓРјР°С‚СЊ СЃРѕСЂС‚РёСЂРѕРІРєСѓ
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 21 2021 02:52:18, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 21 2021 02:52:23
+
+Run file:	C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe
+Directory:	C:\Github\Hamlet\Hamlet-Onegin
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D454 в функции put_lines_in_array() в файле C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h на строке 167. Попытка прочесть данные по адресу NULL в модуле C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x005062FC (32-bit), Flags: Cmdre0, Thread: 0x48BC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D454 in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: put_lines_in_array() at C:/Github/Hamlet/Hamlet-Onegin/sort_alphabet.h (167):
+
+    165:         while (getchar() != EOF)
+    166:         {
+=>  167:             fgets (input_string_array[numstr], MAXSYMBOLS, file);
+    168:             numstr++;
+    169:         }
+
+# 1 0x0042D520 in C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe: main() at C:/Github/Hamlet/Hamlet-Onegin/hamlet.cpp (18):
+
+     16:     char** input_string_array = (char**) calloc (nLines, sizeof (char*)); //РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ СЃРѕ СЃС‚СЂРѕРєР°РјРё РёР· С‚РµРєСЃС‚Р°
+     17:     to_initialise_array(input_string_array, nLines);
+=>   18:     put_lines_in_array (file, input_string_array, &nLines);
+     19: 
+     20:     // РїСЂРёРґСѓРјР°С‚СЊ СЃРѕСЂС‚РёСЂРѕРІРєСѓ
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 21 2021 02:52:18, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 21 2021 02:52:23
+
+Run file:	C:\Github\Hamlet\Hamlet-Onegin\hamlet.exe
+Directory:	C:\Github\Hamlet\Hamlet-Onegin
+
+--------------------------------------------------
